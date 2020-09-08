@@ -39,7 +39,7 @@ class AspectAwarePreprocessor:
         # re-grab the width and height, followed by performing
         # the crop
 
-        (h,w) = image.shape[:.2]
+        (h,w) = image.shape[:2]
         image = image[dH:h - dH, dW:w - dW]
 
         # finally, resize the image to the provided spatial
